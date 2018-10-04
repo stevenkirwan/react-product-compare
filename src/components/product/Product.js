@@ -24,9 +24,17 @@ export default class Product extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            error: undefined
+            error: undefined,
+            opacity: 0
         };
     }
+
+    componentDidMount() {
+        this.handleTransition();
+    }
+
+    handleTransition = () =>
+        setTimeout(() => this.setState({ opacity: 1 }), 100);
 
     addToCompare = product => {
         const error = this.props.addToCompare(product);
@@ -39,7 +47,7 @@ export default class Product extends Component {
     render() {
         const { product } = this.props;
         return (
-            <ProductWrapper>
+            <ProductWrapper style={{opacity: this.state.opacity, transition: "opacity 3s ease"}}>
                 <ProductSaving
                     regularPrice={product.regularPrice}
                     salePrice={product.salePrice}
