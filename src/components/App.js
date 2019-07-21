@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import Spinner from "./Spinner";
-import ProductList from "./ProductList";
+import ProductList from "./productList/ProductList";
 import CompareList from "./CompareList";
 
 class App extends Component {
@@ -64,7 +64,7 @@ class App extends Component {
             <div>
                 {this.state.data.length > 0 ? (
                     <ProductList
-                        {...this.state}
+                        data={this.state.data}
                         addToCompare={this.addToCompare}
                     />
                 ) : (
