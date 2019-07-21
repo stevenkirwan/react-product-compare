@@ -67,9 +67,6 @@ export default class Product extends Component {
                     salePrice={product.salePrice}
                     regularPrice={product.regularPrice}
                 />
-                <button className="compare-btn" onClick={this.addToCompare}>
-                    Compare
-                </button>
                 <br />
                 {this.state.error && <p>{this.state.error}</p>}
             </ProductWrapper>
