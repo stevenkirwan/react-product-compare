@@ -23,10 +23,12 @@ const Product = ({ product }) => {
       />
       <ProductCategory category={product.productTemplate} />
       <ProductTitle manufacturer={product.manufacturer} />
-      <ProductReviews
-        customerReviewAverage={product.customerReviewAverage}
-        customerReviewCount={product.customerReviewCount}
-      />
+      {product.customerReviewCount !== null && (
+        <ProductReviews
+          customerReviewAverage={product.customerReviewAverage}
+          customerReviewCount={product.customerReviewCount}
+        />
+      )}
       <ProductPrice
         salePrice={product.salePrice}
         regularPrice={product.regularPrice}

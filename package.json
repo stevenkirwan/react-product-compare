@@ -8,11 +8,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.2.0",
+    "react-infinite-scroll-component": "^5.0.5",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.0",
     "react-slick": "0.23.1",
-    "styled-components": "^3.4.9",
+    "styled-components": "^3.4.10",
     "stylis": "^3.5.3"
   },
   "scripts": {
