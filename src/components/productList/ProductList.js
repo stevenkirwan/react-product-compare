@@ -23,7 +23,7 @@ const ProductList = () => {
       .catch((e) => {
         console.log(e);
       });
-  });
+  }, []);
 
   return products.length > 0 ? (
     <ProductListStyled>
